@@ -1,0 +1,82 @@
+    :root {
+        --white-gray: #f1f5f9;
+        --black-gray:#212529;
+        --black: #000;
+        --red: #f00;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 900px;
+        background-color: var(--white-gray);
+        margin: 0;
+    }
+
+    .calculator {
+        text-align: center;
+    }
+
+    .display {
+        background-color: #4950505b;    
+        border: 2px #030000;       
+        padding: 10px;                       
+        text-align: right;         
+        min-height: 25px;        
+        margin-bottom: 20px;       
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 120px);
+        gap: 15px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer
+    }
+
+    .btn-black {
+        background-color: var(--black);
+    }
+
+    .btn-red {
+        background-color: var(--red);
+    }
+
+    .is-light {
+        background-color: var(--white-gray);
+        color: var(--black-gray)
+    }
+
+    .is-dark {
+        background-color: var(--black-gray);
+        color: var(--white-gray)
+    }
+
+    .copy {
+        margin-bottom: 50px;
+        margin-top: 40px;
+        text-align: center;
+        background-color: #000;
+        border-radius: 12%;
+    }
+
+    .h1 {
+        position: relative;
+    }
+    
+    #btnswitch {
+        position: absolute;
+        top: 15px;
+        left: 350px;
+        height: 50px;
+        font-size: 17px;
+        background-color: gray;
+    }
