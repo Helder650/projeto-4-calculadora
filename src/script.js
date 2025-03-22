@@ -75,3 +75,15 @@ document.querySelector(".delete").addEventListener("click", () => {
     }
     
     display.innerText = num1 + (operator ? " " + operator + " " : "") + num2})
+
+let expression = ""
+const screen = document.querySelector(".display")
+
+document.querySelectorAll(".key").forEach(btn =>
+    btn.addEventListener("click", () =>
+        screen.innerText = expression = btn.value === "=" ? eval(expression) || "" : expression + btn.value         //ajuda do chat pros parenteses funcionar
+    )
+)
+
+document.querySelector(".clear").addEventListener("click", () => screen.innerText = expression = "")
+document.querySelector(".delete").addEventListener("click", () => screen.innerText = expression = expression.slice(0, -1))
